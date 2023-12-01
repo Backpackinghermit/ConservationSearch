@@ -47,7 +47,6 @@
   text-decoration: none;
 }
 .header1-container1 {
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
   align-items: center;
   margin-right: var(--dl-space-space-unit);
@@ -55,7 +54,6 @@
   text-decoration: none;
 }
 .header1-container2 {
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
   align-items: center;
   margin-left: var(--dl-space-space-halfunit);
@@ -74,7 +72,7 @@
 }
 .header1-container3 {
   flex: 0 0 auto;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
+  
   display: flex;
   align-items: center;
   flex-direction: row;

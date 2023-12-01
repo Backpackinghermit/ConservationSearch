@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SearchResults - Notus Pro</title>
+    <title>SearchResults - ArtiFind</title>
     <meta property="og:title" content="SearchResults - Notus Pro" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -33,7 +33,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
       data-tag="font"
     />
-  </head>
+  <link rel="stylesheet" href="/nordsec-TVWkJOQa_sRISfRj/stylesheet?id=6EOYV4UMSacFEgAY"></head>
   <body>
     <link rel="stylesheet" href="./style.css" />
     <div>
@@ -48,7 +48,7 @@
             >
               <div class="header1-container">
                 <h1 class="header1-heading TextSM">
-                  <span>CONSERVATION SEARCH</span>
+                  <a href="https://conservationsearch.neocities.org/#gsc.tab=0" class="header1-link">ARTIFIND</a>
                 </h1>
                 <div class="header1-container1"></div>
                 <div class="header1-container2"></div>
@@ -81,7 +81,7 @@
                         d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
                       ></path>
                     </svg>
-                    <span class="header1-text TextSM">PROFILE</span>
+                    <span class="header1-text TextSM"></span>
                   </div>
                   <div class="header1-container5">
                     <svg viewBox="0 0 1024 1024" class="header1-icon06">
@@ -98,7 +98,7 @@
                         d="M736 576h-448c-17.672 0-32-14.326-32-32s14.328-32 32-32h448c17.674 0 32 14.326 32 32s-14.326 32-32 32z"
                       ></path>
                     </svg>
-                    <span class="header1-text1 TextSM">BLOG</span>
+                    <span class="header1-text1 TextSM"></span>
                   </div>
                 </div>
                 <div class="header1-bot">
@@ -127,11 +127,29 @@
           </div>
         </div>
         <div class="search-results-section1">
-          <div class="search-results-container2"><span>Results</span></div>
-          <script async src="https://cse.google.com/cse.js?cx=76c1046a518094615">
+          <div class="search-results-container2">
+            <div class="search-bar-container search-bar-root-class-name">
+              <form id="searchForm" method="get" action="https://conservationsearch.neocities.org/search-results">
+                <input
+                    type="text"
+                    autofocus=""
+                    placeholder="search"
+                    class="search-bar-textinput input"
+                    name="q" id="search" size="25" value=""
+                />
+                <input type="submit" class="invisible-submit" />
+            </form>
+            <button type="button" class="search-bar-button button" onclick="submitSearchForm()">
+              <svg viewBox="0 0 1024 1024" class="search-bar-icon">
+                  <path
+                  d="M406 598q80 0 136-56t56-136-56-136-136-56-136 56-56 136 56 136 136 56zM662 598l212 212-64 64-212-212v-34l-12-12q-76 66-180 66-116 0-197-80t-81-196 81-197 197-81 196 81 80 197q0 42-20 95t-46 85l12 12h34z"
+                ></path>
+                </svg>
+            </div>
+          
+          <script async src="https://cse.google.com/cse.js?cx=63454d5133bcf4051">
           </script>
           <div class="gcse-searchresults-only"></div>
-         
         </div>
         <div class="footer1-container footer1-root-class-name2">
           <div class="footer1-container1">
@@ -171,5 +189,22 @@
       </div>
     </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script>
+      document.getElementById('searchForm').onsubmit = function() {
+          // Check if the search input has a value
+          var searchValue = document.getElementById('searchInput').value;
+          if (!searchValue) {
+              // Prevent form submission if the search input is empty
+              return false;
+          }
+          // Clear the form input after submission
+          document.getElementById('searchInput').value = '';
+      };
+  
+      function submitSearchForm() {
+          // Manually submit the form
+          document.getElementById('searchForm').submit();
+      }
+  </script>
   </body>
 </html>
