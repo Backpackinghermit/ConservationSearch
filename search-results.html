@@ -48,7 +48,7 @@
             >
               <div class="header1-container">
                 <h1 class="header1-heading TextSM">
-                  <a href="https://conservationsearch.neocities.org/#gsc.tab=0" class="header1-link">CONSERVATION SEARCH</a>
+                  <span>CONSERVATION SEARCH</span>
                 </h1>
                 <div class="header1-container1"></div>
                 <div class="header1-container2"></div>
@@ -127,29 +127,11 @@
           </div>
         </div>
         <div class="search-results-section1">
-          <div class="search-results-container2">
-            <div class="search-bar-container search-bar-root-class-name">
-              <form id="searchForm" method="get" action="https://conservationsearch.neocities.org/search-results">
-                <input
-                    type="text"
-                    autofocus=""
-                    placeholder="search"
-                    class="search-bar-textinput input"
-                    name="q" id="search" size="25" value=""
-                />
-                <input type="submit" class="invisible-submit" />
-            </form>
-            <button type="button" class="search-bar-button button" onclick="submitSearchForm()">
-              <svg viewBox="0 0 1024 1024" class="search-bar-icon">
-                  <path
-                  d="M406 598q80 0 136-56t56-136-56-136-136-56-136 56-56 136 56 136 136 56zM662 598l212 212-64 64-212-212v-34l-12-12q-76 66-180 66-116 0-197-80t-81-196 81-197 197-81 196 81 80 197q0 42-20 95t-46 85l12 12h34z"
-                ></path>
-                </svg>
-            </div>
-          
-          <script async src="https://cse.google.com/cse.js?cx=63454d5133bcf4051">
+          <div class="search-results-container2"><span>Results</span></div>
+          <script async src="https://cse.google.com/cse.js?cx=76c1046a518094615">
           </script>
           <div class="gcse-searchresults-only"></div>
+         
         </div>
         <div class="footer1-container footer1-root-class-name2">
           <div class="footer1-container1">
@@ -189,22 +171,5 @@
       </div>
     </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-    <script>
-      document.getElementById('searchForm').onsubmit = function() {
-          // Check if the search input has a value
-          var searchValue = document.getElementById('searchInput').value;
-          if (!searchValue) {
-              // Prevent form submission if the search input is empty
-              return false;
-          }
-          // Clear the form input after submission
-          document.getElementById('searchInput').value = '';
-      };
-  
-      function submitSearchForm() {
-          // Manually submit the form
-          document.getElementById('searchForm').submit();
-      }
-  </script>
   </body>
 </html>

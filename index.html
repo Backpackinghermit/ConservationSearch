@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SearchPage - Notus Pro</title>
+    <title>Conservation Search</title>
     <meta property="og:title" content="SearchPage - Notus Pro" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
-    <link rel="manifest" href="/manifest.json">
-
 
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
@@ -35,6 +33,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
       data-tag="font"
     />
+    <link rel="manifest" href="/manifest.json">
+
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -48,13 +48,17 @@
               data-role="Header"
               class="header1-header header1-root-class-name2"
             >
-              <div class="header1-container">
-                <h1 class="header1-heading TextSM">
-                  <a href="https://conservationsearch.neocities.org/#gsc.tab=0" class="header1-link">CONSERVATION SEARCH</a>
-                </h1>
-                <div class="header1-container1"></div>
-                <div class="header1-container2"></div>
-              </div>
+              
+                
+                <div class="header1-container">
+                  <h1 class="header1-heading TextSM">
+                    <a href="https://conservationsearch.neocities.org/#gsc.tab=0" class="header1-link">CONSERVATION SEARCH</a>
+                  </h1>
+                </div>
+                
+              
+                
+              
               <div data-role="BurgerMenu" class="header1-burger-menu">
                 <svg viewBox="0 0 1024 1024" class="header1-icon">
                   <path
@@ -65,9 +69,11 @@
               <div class="header1-container3"></div>
               <div data-role="MobileMenu" class="header1-mobile-menu">
                 <div class="header1-top">
-                  <h1 class="header1-heading1 TextSM">
-                    <span>NOTUS PRO</span>
-                  </h1>
+                  <div class="header1-container">
+                    <h1 class="header1-heading TextSM">
+                      <a href="https://conservationsearch.neocities.org/#gsc.tab=0" class="header1-link">CONSERVATION SEARCH</a>
+                    </h1>
+                  </div>
                   <div data-role="CloseMobileMenu" class="header1-close-menu">
                     <svg viewBox="0 0 1024 1024" class="header1-icon02">
                       <path
@@ -131,28 +137,28 @@
         <div class="search-page-section1">
           <div class="search-page-container2">
             <div class="search-page-container3">
-              <h3 class="search-page-text Healine">Conservation Search</h3>
-              <div class="search-bar-container search-bar-root-class-name">
-                <form id="searchForm" method="get" action="https://conservationsearch.neocities.org/search-results">
-                  <input
-                      type="text"
-                      autofocus=""
-                      placeholder="search"
-                      class="search-bar-textinput input"
-                      name="q" id="search" size="25" value=""
-                  />
-                  <input type="submit" class="invisible-submit" />
-              </form>
-              <button type="button" class="search-bar-button button" onclick="submitSearchForm()">
-                <svg viewBox="0 0 1024 1024" class="search-bar-icon">
-                    <path
-                    d="M406 598q80 0 136-56t56-136-56-136-136-56-136 56-56 136 56 136 136 56zM662 598l212 212-64 64-212-212v-34l-12-12q-76 66-180 66-116 0-197-80t-81-196 81-197 197-81 196 81 80 197q0 42-20 95t-46 85l12 12h34z"
-                  ></path>
-                  </svg>
+              <div class="header1-container">
+                <h1 class="search-page-text Healine">
+                  <a href="https://conservationsearch.neocities.org/#gsc.tab=0" class="header1-link">CONSERVATION SEARCH</a>
+                </h1>
               </div>
+              <div class="search-bar-container">
+                <form id="searchForm" action="https://cse.google.com/cse.js?cx=76c1046a518094615" method="get">
+                  <input type="text" id="searchInput" name="q" placeholder="Search...">
+                  <button type="submit">Search</button>
+              </form>
+              <div class="gcse-searchresults-only"></div>
+                
+                
+               
+                
+              </div>
+              
+
+
             </div>
           </div>
-         
+          
         </div>
         <div class="footer1-container footer1-root-class-name1">
           <div class="footer1-container1">
@@ -192,37 +198,8 @@
       </div>
     </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-          window.addEventListener('load', function() {
-              navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                  // Registration was successful
-                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
-              }, function(err) {
-                  // Registration failed
-                  console.log('ServiceWorker registration failed: ', err);
-              });
-          });
-      }
-  </script>
-    <script>
-      document.getElementById('searchForm').onsubmit = function() {
-          // Check if the search input has a value
-          var searchValue = document.getElementById('searchInput').value;
-          if (!searchValue) {
-              // Prevent form submission if the search input is empty
-              return false;
-          }
-          // Clear the form input after submission
-          document.getElementById('searchInput').value = '';
-      };
-  
-      function submitSearchForm() {
-          // Manually submit the form
-          document.getElementById('searchForm').submit();
-      }
-  </script>
-  
-  
+    <script async src="https://cse.google.com/cse.js?cx=76c1046a518094615">
+    </script>
+    
   </body>
 </html>
