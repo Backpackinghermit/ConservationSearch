@@ -1,6 +1,6 @@
 {
-  "short_name": "SearchApp",
-  "name": "SearchPage",
+  "short_name": "Artifind Conservation Search",
+  "name": "Artifind",
   "icons": [
     {
       "src": "art-svgrepo-com.svg",
