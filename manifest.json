@@ -4,12 +4,12 @@
   "icons": [
     {
       "src": "art-svgrepo-com.svg",
-      "sizes": "48x48",
+      "sizes": "48x48 192x192",
       "type": "image/webp"
     },
     {
       "src": "art-svgrepo-com.svg",
-      "sizes": "72x72 96x96 128x128 256x256",
+      "sizes": "72x72 96x96 128x128 256x256 512x512",
       "type": "image/x-icon"
     }
   ],
