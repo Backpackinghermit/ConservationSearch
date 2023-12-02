@@ -1,3 +1,7 @@
+.install-button {
+  display: none;
+}
+
 .invisible-submit {
   position: absolute;
   left: -9999px;
