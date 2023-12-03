@@ -1,19 +1,37 @@
-let defferedPrompt;
-const addbtn = document.querySelector('.btn');
 
-window.addEventListener('beforeinstallprompt', event => {
-    event.preventDefault();
-    defferedPrompt = event
-    addbtn.style.display = 'block';
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
 });
 
-addbtn.addEventListener('click', event => {
-    defferedPrompt.prompt();
+btnInstall.addEventListener('click', (e) => {
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('User accepted the install prompt');
+    } else {
+      console.log('User dismissed the install prompt');
+    }
+    deferredPrompt = null;
+  });
+});
 
-    defferedPrompt.userChoice.then(choice => {
-        if(choice.outcome === 'accepted'){
-            console.log('user accepted the prompt')
-        }
-        defferedPrompt = null;
-    })
-})
+window.addEventListener('appinstalled', (evt) => {
+  // Handle post-installation event
+});
+
+
+document.getElementById('searchForm').onsubmit = function() {
+  var searchValue = document.getElementById('searchInput').value;
+  if (!searchValue) {
+      return false;
+  }
+  document.getElementById('searchInput').value = '';
+};
+
+function submitSearchForm() {
+  document.getElementById('searchForm').submit();
+};
+
