@@ -3,7 +3,7 @@
   "name": "Artifind Conservation Search",
   "icons": [
     {
-      "src": "art-svgrepo-com.svg",
+      "src": "./icons/art-svgrepo-com.svg",
       "sizes": "48x48 192x192",
       "type": "image/webp"
     },

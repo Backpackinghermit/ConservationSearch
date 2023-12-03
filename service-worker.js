@@ -4,13 +4,12 @@ self.addEventListener('install', function(e) {
       return cache.addAll([
         '/',
         '/index.html',
-        '/style.css',
-        '/script.js',
-        '/search.html',
+        '/css/index.css',
+        '/css/style.css',
+        '/js/script.js',
         '/search-results.html',
-        '/search.css',
-        '/search-results.css',
-        '/art-svgrepo-com.svg',
+        '/css/search-results.css',
+        '/icons/art-svgrepo-com.svg',
         
       ]);
     })
