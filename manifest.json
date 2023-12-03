@@ -17,6 +17,15 @@
   "background_color": "#FFFFFF",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#FFFFFF"
+  "theme_color": "#FFFFFF",
+  "display_override": [
+    "browser",
+    "fullscreen",
+    "minimal-ui",
+    "window-controls-overlay"
+  ],
+  "orientation": "portrait",
+  "share_target": {
+    "method": "GET"
+  }
 }
-
