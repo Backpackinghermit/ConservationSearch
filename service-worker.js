@@ -4,12 +4,13 @@ self.addEventListener('install', function(e) {
       return cache.addAll([
         '/',
         '/index.html',
-        '/css/index.css',
-        '/css/style.css',
-        '/js/script.js',
+        '/style.css',
+        '/script.js',
+        '/search.html',
         '/search-results.html',
-        '/css/search-results.css',
-        '/searchicon.svg',
+        '/css.search.css',
+        '/css/index.css',
+        '/art-svgrepo-com.svg',
         
       ]);
     })
@@ -23,18 +24,3 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
-
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.filter(cacheName => {
-          return cacheName !== 'my-pwa-cache';
-        }).map(cacheName => {
-          return caches.delete(cacheName);
-        })
-      );
-    })
-  );
-});
-
