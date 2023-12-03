@@ -9,7 +9,7 @@ self.addEventListener('install', function(e) {
         '/js/script.js',
         '/search-results.html',
         '/css/search-results.css',
-        '/icons/art-svgrepo-com.svg',
+        '/searchicon.svg',
         
       ]);
     })
