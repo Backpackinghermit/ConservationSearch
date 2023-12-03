@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', (event) => {
 let defferedPrompt;
 const addbtn = document.querySelector('.btn');
 
@@ -17,3 +18,4 @@ addbtn.addEventListener('click', event => {
         defferedPrompt = null;
     })
 })
+});
