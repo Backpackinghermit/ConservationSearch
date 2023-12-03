@@ -10,7 +10,8 @@ self.addEventListener('install', function(e) {
         '/search-results.html',
         '/css/search.css',
         '/css/index.css',
-        '/searchicon.svg',
+        '/searchicon-192.png',
+        '/searchicon-512.png'
         
       ]);
     })
