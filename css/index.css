@@ -1,6 +1,10 @@
-.install-button {
-  display: none;
+#installButton {
+  display: none; /* Hide the button initially */
+  margin-top: 10px;
+  z-index: 1000;
+  /* other styling as needed */
 }
+
 
 .invisible-submit {
   position: absolute;
@@ -31,9 +35,7 @@
   display: flex;
   padding: var(--dl-space-space-unitandhalf);
   z-index: 1;
-  max-width: 1320px;
   align-items: center;
-  margin-bottom: 0.75rem;
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--dl-color-secondary-300);

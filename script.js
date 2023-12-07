@@ -1,21 +1,28 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-let defferedPrompt;
-const addbtn = document.querySelector('.btn');
-
-window.addEventListener('beforeinstallprompt', event => {
-    event.preventDefault();
-    defferedPrompt = event
-    addbtn.style.display = 'block';
-});
-
-addbtn.addEventListener('click', event => {
-    defferedPrompt.prompt();
-
-    defferedPrompt.userChoice.then(choice => {
-        if(choice.outcome === 'accepted'){
-            console.log('user accepted the prompt')
-        }
-        defferedPrompt = null;
-    })
-})
-});
+    let deferredPrompt; // Declare deferredPrompt variable
+  
+    // Listen for the beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      showInstallButton(); // Call showInstallButton when the event is fired
+    });
+  
+    // Define showInstallButton function
+    function showInstallButton() {
+      const installButton = document.getElementById('installButton'); // Get button by ID
+      installButton.style.display = 'block'; // Show the button
+      installButton.addEventListener('click', onInstallButtonClick); // Add click event listener
+    }
+  
+    // Define onInstallButtonClick function
+    async function onInstallButtonClick() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt(); // Show the install prompt
+        const { outcome } = await deferredPrompt.userChoice; // Wait for user response
+        console.log(`User response to the install prompt: ${outcome}`);
+        deferredPrompt = null; // Reset deferredPrompt after use
+      }
+    }
+  });
+  
