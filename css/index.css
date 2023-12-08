@@ -6,7 +6,7 @@
 
 .AddToHome {
   flex: 0 0 auto;
-  margin: 10px;
+  margin: 20px;
   display: flex;
   padding: var(--dl-space-space-halfunit);
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
