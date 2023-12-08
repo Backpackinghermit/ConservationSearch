@@ -1,6 +1,5 @@
 #installButton {
   display: none; /* Hide the button initially */
-  margin-top: 10px;
   z-index: 1000;
   /* other styling as needed */
 }
@@ -9,7 +8,7 @@
    flex: 0 0 auto;
   margin: 5px;
   display: flex;
-
+  padding: 10px;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   align-items: center;
   border-radius: 10%;
