@@ -1,6 +1,6 @@
 #installButton {
   display: none; /* Hide the button initially */
-  margin-top: 50px;
+  margin-top: 30px;
   z-index: 1000;
   /* other styling as needed */
 }
