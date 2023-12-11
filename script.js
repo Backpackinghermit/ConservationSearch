@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   function showInstallButton() {
-    const installButton = document.getElementById('install-button');
+    const installButton = document.getElementById('installButton');
     // Check if the button element is present
     if (installButton) {
       installButton.style.display = 'block'; // Use 'block' to explicitly set the display property
