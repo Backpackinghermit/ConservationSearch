@@ -4,31 +4,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
       registration.unregister();
     });
   }
-  
-    let deferredPrompt; // Declare deferredPrompt variable
-  
-    // Listen for the beforeinstallprompt event
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      showInstallButton(); // Call showInstallButton when the event is fired
-    });
-  
-    // Define showInstallButton function
-    function showInstallButton() {
-      const installButton = document.getElementById('installButton'); // Get button by ID
-      installButton.style.display = 'block'; // Show the button
-      installButton.addEventListener('click', onInstallButtonClick); // Add click event listener
-    }
-  
-    // Define onInstallButtonClick function
-    async function onInstallButtonClick() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt(); // Show the install prompt
-        const { outcome } = await deferredPrompt.userChoice; // Wait for user response
-        console.log(`User response to the install prompt: ${outcome}`);
-        deferredPrompt = null; // Reset deferredPrompt after use
-      }
+
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // Conditionally show the install button
+    if (shouldShowInstallButton()) {
+      showInstallButton();
     }
   });
+
+  function shouldShowInstallButton() {
+    // Add your conditions here
+    // For example, show the install button only if the app is not installed
+    return !window.matchMedia('(display-mode: standalone)').matches;
+  }
+
+  function showInstallButton() {
+    const installButton = document.getElementById('installButton');
+    installButton.style.display = 'block';
+    installButton.addEventListener('click', onInstallButtonClick);
+  }
+
+  async function onInstallButtonClick() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response to the install prompt: ${outcome}`);
+      deferredPrompt = null;
+    }
+  }
+});
+
   
