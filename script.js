@@ -17,15 +17,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   function shouldShowInstallButton() {
-    // Add your conditions here
-    // For example, show the install button only if the app is not installed
-    return !window.matchMedia('(display-mode: standalone)').matches;
+    // Check if the deferredPrompt is available and the app is not installed
+    return deferredPrompt && !navigator.standalone;
   }
 
   function showInstallButton() {
     const installButton = document.getElementById('install-button');
-    installButton.style.display = 'block';
-    installButton.addEventListener('click', onInstallButtonClick);
+    // Check if the button element is present
+    if (installButton) {
+      installButton.style.display = 'block';
+      installButton.addEventListener('click', onInstallButtonClick);
+    }
   }
 
   async function onInstallButtonClick() {
