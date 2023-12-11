@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
       showInstallButton();
     }
   });
+
   function shouldShowInstallButton() {
-    // Check if the deferredPrompt is available and the app is not installed
-    return deferredPrompt && !window.matchMedia('(display-mode: standalone)').matches;
+    // Add your conditions here
+    // For example, show the install button only if the app is not installed
+    return !window.matchMedia('(display-mode: standalone)').matches;
   }
-  
+
   function showInstallButton() {
     const installButton = document.getElementById('install-button');
     installButton.style.display = 'block';
@@ -35,5 +37,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   }
 });
-
-  
