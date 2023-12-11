@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
+  }
+  
     let deferredPrompt; // Declare deferredPrompt variable
   
     // Listen for the beforeinstallprompt event
