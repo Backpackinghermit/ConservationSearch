@@ -9,6 +9,7 @@ self.addEventListener('install', function(e) {
         '/search.html',
         '/search-results.html',
         '/css/search.css',
+        '/css/about.css',
         '/css/index.css',
         '/searchicon-192.png',
         '/searchicon-512.png'
