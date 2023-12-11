@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const installButton = document.getElementById('install-button');
     // Check if the button element is present
     if (installButton) {
-      installButton.style.display = 'block';
       installButton.addEventListener('click', onInstallButtonClick);
     }
   }
