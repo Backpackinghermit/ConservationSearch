@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const installButton = document.getElementById('install-button');
     // Check if the button element is present
     if (installButton) {
+      installButton.style.display = ''; // Set to an empty string to use the default display property
       installButton.addEventListener('click', onInstallButtonClick);
     }
   }
